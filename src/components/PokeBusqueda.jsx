@@ -19,7 +19,6 @@ const PokeBusqueda = ({ setSearch }) => {
             placeholder="Ingresa el nombre"
             className="p-1"
             onChange={(e) => setSearch(e.target.value)}
-            value=""
           />
         </Form>
       </div>

@@ -6,9 +6,11 @@ import Card from "react-bootstrap/Card";
 
 // Componente Cards recibiendo prop pokeUrl
 const PokemonCard = ({ pokeUrl }) => {
+
+  // Estado Data
   const [pokeData, setPokeData] = useState({});
 
-//   Función para el useEffect
+//   Función para el useEffect llamando al pokeUrl
   const getPokemon = async () => {
     const response = await fetch(pokeUrl);
     const data = await response.json();
