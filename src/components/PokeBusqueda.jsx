@@ -1,16 +1,13 @@
 // Importando componente Form de react-bootstrap
 import Form from "react-bootstrap/Form";
 
-
 // // Componente Buscador de pokemons que recibe props setSearch del componente padre MiApi.jsx
 const PokeBusqueda = ({ setSearch }) => {
-
-  
   return (
-    <div className="browser py-5 mb-3" style={{ height: "17rem" }}>
-      <div className="container-fluid">
+    <div className="browser py-5" style={{ height: "17rem" }}>
+      <div className="container">
         <Form className="d-flex flex-column align-items-start my-3">
-          <Form.Label htmlFor="search" className="text-light h4">
+          <Form.Label htmlFor="search" className="text-light h3">
             Encuentra tu Pokemon
           </Form.Label>
           <input
@@ -25,6 +22,5 @@ const PokeBusqueda = ({ setSearch }) => {
     </div>
   );
 };
-
 
 export default PokeBusqueda;

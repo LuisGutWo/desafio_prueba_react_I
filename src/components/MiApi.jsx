@@ -4,13 +4,10 @@ import { useEffect, useState } from "react";
 import PokeBusqueda from "./PokeBusqueda";
 import PokemonCard from "./PokemonCard";
 
-
 const MiApi = () => {
-
   // Creando los estados
   const [pokemons, setPokemons] = useState([]);
   const [search, setSearch] = useState("");
-
 
   // Función request que trae la API con useEffect
   const pokeRequest = async () => {
@@ -24,21 +21,26 @@ const MiApi = () => {
     pokeRequest();
   }, []);
 
-
-  // Pintando el jsx 
+  // Pintando el jsx
   return (
     <>
       <PokeBusqueda setSearch={setSearch} />
-      <div className="d-flex flex-wrap gap-3 justify-content-center align-item-center">
+
+      <section className="d-flex justify-content-between align-items-center border-bottom border-black my-3 mx-4">
+        <h1 className="text-black">Pokemones</h1>
+        <img src="src/assets/img/pokebola_3.png" alt="" className="title_img" />
+      </section>
+
+      <div className="d-flex flex-wrap gap-4 justify-content-center align-item-center">
         {pokemons
           .filter((pokemon) => pokemon.name.includes(search))
           .map((pokemon) => (
             <PokemonCard key={pokemon.name} pokeUrl={pokemon.url} />
           ))
-          .sort((a, b) => a - b)}
+          .sort((x, y) => x.name - y.name)}
       </div>
     </>
-  ); 
+  );
 };
 
 export default MiApi;
