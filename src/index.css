@@ -9,7 +9,7 @@ body {
 }
 
 .browser {
-  background-image: url(src/assets/img/pokemon_background1.jpg);
+  background-image: url(../src/assets/img/pokemon_background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +22,7 @@ body {
       rgba(30, 30, 40, var(--opacidad-negro)),
       rgba(40, 30, 70, var(--opacidad-negro))
     ),
-    url(src/assets/img/fondo_cards.jpg);
+    url(../src/assets/img/fondo_cards.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

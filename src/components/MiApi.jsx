@@ -25,7 +25,6 @@ const MiApi = () => {
 
       const data = await response.json();
       setPokemons(data.results);
-
     } catch (error) {
       console.log(error);
     }
@@ -42,7 +41,11 @@ const MiApi = () => {
 
       <section className="d-flex justify-content-between align-items-center border-bottom border-black my-3 mx-4">
         <h1 className="text-light">Pokemones</h1>
-        <img src="src/assets/img/pokebola_3.png" alt="" className="title_img" />
+        <img
+          src="src/assets/img/pokebola.png"
+          alt=""
+          className="title_img"
+        />
       </section>
 
       <div className="d-flex flex-wrap gap-4 justify-content-center align-item-center">

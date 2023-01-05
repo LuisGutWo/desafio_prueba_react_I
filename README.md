@@ -1,9 +1,11 @@
 # Desafío Final modulo React I
-## Crear una plicación o Landing Page que consuma alguna API externa.
-<p>Desafío realizado con la API de pokemon, implemente un buscador y aplique estilos Css y Bootstrap.</p>
 
-- [Este es mi video presentando el trabajo]()
+## Crear una aplicación o Landing Page que consuma alguna API externa.
 
-- [Este es el deploy del proyecto]()
+### Desafío realizado con la API de pokemon, implemente un buscador y aplique estilos Css y Bootstrap.
 
-### Para este desafío quise crear un diseño personal basado en pokemon, utilice en su mayoría estilos con css React-Bootstrap y bootstrap nativo.  
+- [Este es mi video presentando el trabajo](https://www.youtube.com/watch?v=rRXuFwn-HNs)
+
+- [Este es el deploy del proyecto](https://fantastic-cassata-3eead7.netlify.app/)
+
+#### Para este desafío quise crear un diseño personal basado en pokemon, utilice en su mayoría estilos con css React-Bootstrap y bootstrap nativo.  
