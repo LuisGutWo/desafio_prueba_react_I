@@ -11,12 +11,26 @@ const MiApi = () => {
 
   // Función request que trae la API con useEffect
   const pokeRequest = async () => {
-    const response = await fetch(
-      "https://pokeapi.co/api/v2/pokemon?limit=40&offset=0"
-    );
-    const data = await response.json();
-    setPokemons(data.results);
+    try {
+      const response = await fetch(
+        "https://pokeapi.co/api/v2/pokemon?limit=40&offset=0"
+      );
+
+      if (!response.ok) {
+        throw {
+          msg: "Fallo el consumo de la Api",
+          error: 404,
+        };
+      }
+
+      const data = await response.json();
+      setPokemons(data.results);
+
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   useEffect(() => {
     pokeRequest();
   }, []);
@@ -27,7 +41,7 @@ const MiApi = () => {
       <PokeBusqueda setSearch={setSearch} />
 
       <section className="d-flex justify-content-between align-items-center border-bottom border-black my-3 mx-4">
-        <h1 className="text-black">Pokemones</h1>
+        <h1 className="text-light">Pokemones</h1>
         <img src="src/assets/img/pokebola_3.png" alt="" className="title_img" />
       </section>
 
