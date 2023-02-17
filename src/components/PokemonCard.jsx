@@ -11,9 +11,20 @@ const PokemonCard = ({ pokeUrl }) => {
 
   //   Función para el useEffect llamando al pokeUrl
   const getPokemon = async () => {
-    const response = await fetch(pokeUrl);
-    const data = await response.json();
-    setPokeData(data);
+    try {
+      const response = await fetch(pokeUrl);
+
+      if (!response.ok) {
+        throw {
+          msg: "Fallo el consumo de la Api",
+          error: 404,
+        };
+      }
+      const data = await response.json();
+      setPokeData(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
   //   useEffect recibiendo función para obtener pokemon getPokemon
   useEffect(() => {
