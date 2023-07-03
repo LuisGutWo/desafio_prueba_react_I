@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 // Importando componentes de react-bootstrap
 import Button from "react-bootstrap/Button";
@@ -8,6 +9,7 @@ import Card from "react-bootstrap/Card";
 const PokemonCard = ({ pokeUrl }) => {
   // Estado Data
   const [pokeData, setPokeData] = useState({});
+  const target = useRef(null);
 
   //   Función para el useEffect llamando al pokeUrl
   const getPokemon = async () => {
@@ -37,11 +39,13 @@ const PokemonCard = ({ pokeUrl }) => {
       style={{ width: "18rem" }}
       className="cards text-start border border-dark"
     >
-      <Card.Img
-        variant="top"
-        className="p-5"
-        src={pokeData.sprites?.other?.dream_world?.front_default}
-      />
+      <Link to={`/pokemon/${pokeData.name}`} ref={target} >
+        <Card.Img
+          variant="top"
+          className="p-5"
+          src={pokeData.sprites?.other?.dream_world?.front_default}
+        />
+      </Link>
       <Card.Body className="container" style={{ height: "11rem" }}>
         <Card.Title className="alert bg-secondary bg-gradient text-black">
           {pokeData.id}- {pokeData.name}

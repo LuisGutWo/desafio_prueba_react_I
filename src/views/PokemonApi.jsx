@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
 // Importando los Componentes
-import PokeBusqueda from "./PokeBusqueda";
+import PokeSearch from "./PokeSearch";
 import PokemonCard from "./PokemonCard";
+import Pokemones from "./Pokemones";
 
-const MiApi = () => {
+const PokemonApi = () => {
   // Creando los estados
   const [pokemons, setPokemons] = useState([]);
   const [search, setSearch] = useState("");
@@ -26,7 +27,7 @@ const MiApi = () => {
       const data = await response.json();
       setPokemons(data.results);
     } catch (error) {
-      console.log(error);
+      console.log(erro.message);
     }
   };
 
@@ -37,27 +38,23 @@ const MiApi = () => {
   // Pintando el jsx
   return (
     <>
-      <PokeBusqueda setSearch={setSearch} />
+      <PokeSearch setSearch={setSearch} />
+      <Pokemones />
 
       <section className="d-flex justify-content-between align-items-center border-bottom border-black my-3 mx-4">
         <h1 className="text-light">Pokemones</h1>
-        <img
-          src="src/assets/img/pokebola.png"
-          alt=""
-          className="title_img"
-        />
+        <img src="src/assets/img/pokebola.png" alt="" className="title_img" />
       </section>
-
       <div className="d-flex flex-wrap gap-4 justify-content-center align-item-center">
         {pokemons
           .filter((pokemon) => pokemon.name.includes(search))
           .map((pokemon) => (
             <PokemonCard key={pokemon.name} pokeUrl={pokemon.url} />
           ))
-          .sort((x, y) => x.name - y.name)}
+          .sort((a, b) => a.name - b.name)}
       </div>
     </>
   );
 };
 
-export default MiApi;
+export default PokemonApi;
