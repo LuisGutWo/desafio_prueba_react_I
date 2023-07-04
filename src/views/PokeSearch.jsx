@@ -4,10 +4,10 @@ import Form from "react-bootstrap/Form";
 // // Componente Buscador de pokemons que recibe props setSearch del componente padre PokemonApi.jsx
 const PokeSearch = ({ setSearch }) => {
   return (
-    <div className="browser py-5" style={{ height: "17rem" }}>
+    <div className="browser py-5" style={{ height: "100%" }}>
       <div className="container">
         <Form className="d-flex flex-column align-items-start my-3">
-          <Form.Label htmlFor="search" className="text-light h3">
+          <Form.Label htmlFor="search" className="text-light h1">
             Encuentra tu Pokemon
           </Form.Label>
           <input

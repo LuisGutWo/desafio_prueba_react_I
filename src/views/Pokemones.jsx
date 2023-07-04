@@ -47,11 +47,11 @@ const Pokemones = () => {
   if (loading) return <Loading />;
 
   return (
-    <div className="container px-4">
+    <div className="container px-5 py-2">
       <FormControl className="d-flex flex-wrap container-card gap-3">
-        <h3 className="mb-0 mt-5 text-start">
+        <h2 className="mb-2 mt-4 text-start text-light">
           Selecciona a tu Pokemon
-        </h3>
+        </h2>
         <Select className="bg-light" onChange={handleChange}>
           <MenuItem value={""}></MenuItem>
           {pokemones.map((pokemon) => (
@@ -60,7 +60,7 @@ const Pokemones = () => {
             </MenuItem>
           ))}
         </Select>
-        <Button variant="contained" size="medium" onClick={handleClick}>
+        <Button variant="contained" size="lg" onClick={handleClick}>
           Ver Detalles
         </Button>
       </FormControl>

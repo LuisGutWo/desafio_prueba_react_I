@@ -8,14 +8,13 @@ export default function Navbar() {
         <NavLink to="/">
           <img
             src="/src/assets/img/pokebola.png"
-            width="40"
-            height="46"
+            width="55"
             className="d-inline-block align-text-top"
             alt=""
           />
         </NavLink>
       </div>
-      <div className="d-flex gap-2">
+      <div className="d-flex gap-4">
         <NavLink
           to="/"
           className={({ isActive }) =>

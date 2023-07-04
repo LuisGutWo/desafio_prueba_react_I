@@ -31,7 +31,7 @@ const PokemonPage = () => {
   if (error) return <div>Error: Pokemon no encontrado</div>;
 
   return (
-    <div className="container d-flex flex-column justify-content-center align-items-center">
+    <div className="container d-flex flex-column justify-content-center align-items-center vh-100">
       <Card className="pokemon-card d-flex flex-row border border-dark my-3">
         <div>
           <Card.Img
