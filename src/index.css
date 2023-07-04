@@ -28,9 +28,14 @@ body {
   padding: 0px 2em;
   margin: 0;
 }
+.pokemon-logo img:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 0.5s;
+  transition-duration: 0.5s;
+}
 
 .browser {
-  background-image: url(../src/assets/img/pokemon_background.jpg);
+  background-image: url(/img/pokemon_background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,12 +44,13 @@ body {
 .hero-container {
   margin: 0 !important;
   border: none !important;
-  background-image: url(src/assets/img/pokemon_portada.jpg);
+  background-image: url(../public/img/pokemon_portada.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-position-y: center;
-  
+  height: 100vh;
+
 }
 .hero-title {
   display: flex;
@@ -66,7 +72,7 @@ body {
       rgba(30, 30, 40, var(--opacidad-negro)),
       rgba(40, 30, 70, var(--opacidad-negro))
     ),
-    url(../src/assets/img/fondo_cards.jpg);
+    url(../public/img/fondo_cards.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -131,8 +137,3 @@ body {
   border-radius: 6px;
 }
 
-.hero-container {
-  border: rgba(128, 128, 128, 0.481) solid 4px;
-  padding: 1em;
-  margin: 1em;
-}

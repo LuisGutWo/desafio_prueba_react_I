@@ -5,9 +5,9 @@ export default function Navbar() {
   return (
     <Nav className="navbar bg-dark fs-5 m-0">
       <div>
-        <NavLink to="/">
+        <NavLink to="/" className="pokemon-logo">
           <img
-            src="/src/assets/img/pokebola.png"
+            src="/img/pokebola.png"
             width="55"
             className="d-inline-block align-text-top"
             alt=""
